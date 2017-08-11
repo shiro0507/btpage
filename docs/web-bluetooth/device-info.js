@@ -33,7 +33,7 @@ function onButtonClick() {
   log('with ' + JSON.stringify(options));
   navigator.bluetooth.requestDevice(options)
   .then(
-    device => /*{
+    device => {
                 log('> Name:             ' + device.name);
                 log('> Id:               ' + device.id);
                 log('> Connected:        ' + device.gatt.connected);
@@ -44,10 +44,10 @@ function onButtonClick() {
                 log('> vendorID:       ' + device.vendorID);
                 log('> productID:       ' + device.productID);
                 log('> vendorIDSource:  ' + device.vendorIDSource);
-                }*/
+                }
 
-    return device.gatt.connect()
-    /*console.log(device.name);*/
+    /*return device.gatt.connect()
+    console.log(device.name);*/
     )
 
   .catch(error => {
