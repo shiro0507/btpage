@@ -61,6 +61,7 @@ function onButtonClick() {
 
   .catch(error => {
     log('Argh! ' + error);
+    console.log('Argh! ' + error);
   });
 }
 
