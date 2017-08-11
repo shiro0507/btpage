@@ -38,6 +38,8 @@ function onButtonClick() {
     log('> Connected:        ' + device.gatt.connected);
     log('> uuid:             ' + device.uuids);
     log('> ad:               ' + device.adData);
+    log('> product ID:       ' + device.productID);
+    log('> gattServer:       ' + device.gattServer);
   })
   .catch(error => {
     log('Argh! ' + error);
