@@ -32,15 +32,23 @@ function onButtonClick() {
   log('Requesting Bluetooth Device...');
   log('with ' + JSON.stringify(options));
   navigator.bluetooth.requestDevice(options)
-  .then(device => {
-    log('> Name:             ' + device.name);
-    log('> Id:               ' + device.id);
-    log('> Connected:        ' + device.gatt.connected);
-    log('> uuid:             ' + device.uuids);
-    log('> ad:               ' + device.adData);
-    log('> product ID:       ' + device.productID);
-    log('> gattServer:       ' + device.gattServer);
-  })
+  .then(
+    device => {
+                log('> Name:             ' + device.name);
+                log('> Id:               ' + device.id);
+                log('> Connected:        ' + device.gatt.connected);
+                log('> uuid:             ' + device.uuids);
+                log('> ad:               ' + device.adData);
+                log('> productID:       ' + device.productID);
+                log('> gattServer:       ' + device.gattServer);
+                log('> vendorID:       ' + device.vendorID);
+                log('> productID:       ' + device.productID);
+                log('> vendorIDSource:  ' + device.vendorIDSource);
+                }
+
+    device.gatt.connect();
+    )
+  
   .catch(error => {
     log('Argh! ' + error);
   });
