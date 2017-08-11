@@ -1,4 +1,6 @@
 function onButtonClick() {
+
+  /*form*/
   let filters = [];
 
   let filterService = document.querySelector('#service').value;
@@ -19,6 +21,7 @@ function onButtonClick() {
     filters.push({namePrefix: filterNamePrefix});
   }
 
+  /*all*/
   let options = {};
   if (document.querySelector('#allDevices').checked) {
     options.acceptAllDevices = true;
@@ -33,7 +36,8 @@ function onButtonClick() {
     log('> Name:             ' + device.name);
     log('> Id:               ' + device.id);
     log('> Connected:        ' + device.gatt.connected);
-    log('> aaaa:');
+    log('> uuid:             ' + device.uuids);
+    log('> ad:               ' + device.adData);
   })
   .catch(error => {
     log('Argh! ' + error);
