@@ -33,6 +33,7 @@ function onButtonClick() {
     log('> Name:             ' + device.name);
     log('> Id:               ' + device.id);
     log('> Connected:        ' + device.gatt.connected);
+    log('> aaaa:');
   })
   .catch(error => {
     log('Argh! ' + error);
