@@ -49,8 +49,24 @@ function onButtonClick() {
     /*return device.gatt.connect()
     console.log(device.name);*/
     )
+  .then(service => {
+  // Getting Battery Level Characteristic...
+  return service.getCharacteristic('battery_level');
+  })
 
   .catch(error => {
     log('Argh! ' + error);
   });
+}
+
+function onDisconnectButtonClick() {
+  if (!bluetoothDevice) {
+    return;
+  }
+  console.log('Disconnecting from Bluetooth Device...');
+  if (bluetoothDevice.gatt.connected) {
+    bluetoothDevice.gatt.disconnect();
+  } else {
+    console.log('> Bluetooth Device is already disconnected');
+  }
 }
