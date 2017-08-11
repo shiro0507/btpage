@@ -52,6 +52,17 @@ function onButtonClick() {
   .then(service => {
   // Getting Battery Level Characteristic...
   return service.getCharacteristic('battery_level');
+
+  })
+
+
+  .then(characteristic => {
+  // Reading Battery Level...
+  return characteristic.readValue();
+  })
+
+  .then(value => {
+  console.log('Battery percentage is ' + value.getUint8(0));
   })
 
   .catch(error => {
