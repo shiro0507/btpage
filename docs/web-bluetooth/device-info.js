@@ -46,7 +46,8 @@ function onButtonClick() {
                 log('> vendorIDSource:  ' + device.vendorIDSource);
                 }
 
-    device.gatt.connect()
+    return device.gatt.connect()
+    console.log(device.name);
     )
 
   .catch(error => {
