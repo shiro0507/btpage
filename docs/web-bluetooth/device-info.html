@@ -13,7 +13,7 @@ index: index.html
 device information from a nearby Bluetooth Low Energy Device. You may want to
 check out the <a href="device-info-async-await.html">Device Info (Async
 Await)</a> sample.</p>
-
+<!--<script type="text/javascript" src="device-info.js"></script>-->
 <form>
   <label for="allDevices">All Devices</label>
   <input id="allDevices" type="checkbox">
@@ -21,6 +21,8 @@ Await)</a> sample.</p>
   <input id="name" type="text" size=17 placeholder="Device Name">
   <input id="namePrefix" type="text" size=17 placeholder="Device Name Prefix">
   <button>Get Bluetooth Device Info</button>
+ <!-- <input type="button" value="Disconnect" onclick="onButtonClick();"/>-->
+
 </form>
 
 {% include_relative _includes/datalist-services.html %}
@@ -43,4 +45,3 @@ Await)</a> sample.</p>
 
 {% include_relative _includes/utils.html %}
 
-<input type="button" value="Disconnect" onclick="onDisconnectButtonClick();"/>
