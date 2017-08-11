@@ -49,6 +49,11 @@ function onButtonClick() {
     /*return device.gatt.connect()
     console.log(device.name);*/
     )
+  .then(server => {
+  // Getting Battery Service...
+  return server.getPrimaryService('battery_service');
+  })
+
   .then(service => {
   // Getting Battery Level Characteristic...
   return service.getCharacteristic('battery_level');
