@@ -44,10 +44,10 @@ function onButtonClick() {
                 log('> vendorID:       ' + device.vendorID);
                 log('> productID:       ' + device.productID);
                 log('> vendorIDSource:  ' + device.vendorIDSource);
-                }
+                }*/
 
     return device.gatt.connect()
-    console.log(device.name);*/
+    /*console.log(device.name);*/
     )
 
   .catch(error => {
