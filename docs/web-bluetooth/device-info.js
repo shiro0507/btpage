@@ -30,7 +30,9 @@ function onButtonClick() {
   }
 
   log('Requesting Bluetooth Device...');
+  console.log('Requesting Bluetooth Device...');
   log('with ' + JSON.stringify(options));
+  console.log('with ' + JSON.stringify(options));
   navigator.bluetooth.requestDevice(options)
   .then(device => device.gatt.connect()
     /*device => {
