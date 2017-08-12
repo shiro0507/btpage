@@ -24,9 +24,9 @@ function onButtonClick() {
   /*all*/
   let options = {};
   if (document.querySelector('#allDevices').checked) {
-    /*options.acceptAllDevices = true;*/
-    filters.push({services: ['0000180a-0000-1000-8000-00805f9b34fb']});
-    options.filters = filters;
+    /*options.acceptAllDevices = true;
+    filters.push({services: ['0000180a-0000-1000-8000-00805f9b34fb']});*/
+    options.optionalServices = optionalServices: ['0000180a-0000-1000-8000-00805f9b34fb'];
 
   } else {
     options.filters = filters;
