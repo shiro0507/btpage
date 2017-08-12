@@ -37,7 +37,10 @@ function onButtonClick() {
   console.log('Requesting Bluetooth Device...');
   log('with ' + JSON.stringify(options));
   console.log('with ' + JSON.stringify(options));
-  navigator.bluetooth.requestDevice(options)
+
+  /*navigator.bluetooth.requestDevice(options)*/  
+  navigator.bluetooth.requestDevice({acceptAllDevices:true, optionalServices:[UUID]})
+
   .then(device => device.gatt.connect()
     /*device => {
                 log('> Name:             ' + device.name);
