@@ -39,7 +39,7 @@ function onButtonClick() {
   console.log('with ' + JSON.stringify(options));
 
   /*navigator.bluetooth.requestDevice(options)*/  
-  navigator.bluetooth.requestDevice({acceptAllDevices:true, optionalServices:[UUID]})
+  navigator.bluetooth.requestDevice({acceptAllDevices:true, optionalServices:['0000180a-0000-1000-8000-00805f9b34fb']})
 
   .then(device => device.gatt.connect()
     /*device => {
